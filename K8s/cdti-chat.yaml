@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cdti-chat-service
+  namespace: cdti
 spec:
   type: ClusterIP
   selector:
@@ -20,8 +21,9 @@ metadata:
   name: cdti-chat-deployment
   labels:
     app: cdti-chat
+  namespace: cdti
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: cdti-chat
@@ -42,3 +44,4 @@ spec:
           limits: # Limit Resource สำหรับ Container
             memory: "1Gi"
             cpu: "512m"
+      
