@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: cdti-chat-container
-        image: thanabodin19/cdti-chat:1.0
+        image: thanabodin19/cdti-chat:1.1
         ports:
         - containerPort: 3000
         resources: # เพิ่มในส่วนของ Reources
